@@ -1,12 +1,9 @@
 package org.examen.persistence;
 
-import org.examen.model.Objeto1;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 
 public class Objeto2DAO {
     private DBConnection c = new DBConnection();
