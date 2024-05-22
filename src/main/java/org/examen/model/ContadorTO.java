@@ -1,2 +1,4 @@
-package org.examen.model;public class ContadorTO {
+package org.examen.model;
+
+public class ContadorTO {
 }

@@ -1,2 +1,4 @@
-package org.examen.model;public class Objeto2 {
+package org.examen.model;
+
+public class Objeto2 {
 }
