@@ -1,6 +1,9 @@
 package org.examen.model;
 
 public class Objeto1 {
+    private String nombre;
+    private String loQueSea;
+    private String loQueSea2;
 
     private String nombre;
     private String loQueSea;
