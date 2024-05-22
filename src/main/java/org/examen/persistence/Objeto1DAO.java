@@ -35,7 +35,7 @@ public class Objeto1DAO {
         while(rs.next()){
             String nombre = rs.getString("nombre");
             String loQueSea = rs.getString("loquesea");
-            String loQueSea2 = rs.getString("loquesea2");
+            int loQueSea2 = rs.getInt("loquesea2");
             objeto1s.add(new Objeto1(nombre, loQueSea, loQueSea2));
         }
         rs.close();
