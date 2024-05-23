@@ -2,17 +2,19 @@ package org.examen.view;
 
 import org.examen.exceptions.BbddException;
 import org.examen.exceptions.CommandException;
+import org.examen.model.util.Validations;
 
 import java.sql.SQLException;
 
 public class Menu {
     InputData input = new InputData();
     Options op = new Options();
-
+    Validations vl = new Validations();
+    String[] command;
     public void menu(){
         String option;
         do{
-            String[] command = input.askStr().trim().split(" ");
+            command = input.askStr().trim().split(" ");
             op.setCommand(command);
             option = command[0].toLowerCase();
             try{
@@ -35,6 +37,9 @@ public class Menu {
                     case "opcion6":
                         break;
                     case "exit":
+                        if (command.length != 1){
+                            throw new CommandException(CommandException.WRONG_NUM_ARGS);
+                        }
                         System.out.println("Saliendo...");
                         break;
                     default:
@@ -43,8 +48,8 @@ public class Menu {
             } catch (CommandException | BbddException e){
                 System.out.println(e.getMessage());
             } catch (SQLException e){
-                System.out.println("Error con la bbdd: " + e.getMessage());
+                System.out.println("\u001B[31mError con la bbdd: " + e.getMessage() + "\u001B[0m");
             }
-        } while(!option.equals("exit"));
+        } while(!option.equals("exit") || command.length != 1);
     }
 }

@@ -19,6 +19,9 @@ public class Options {
     private Objeto1DAO o1d = new Objeto1DAO();
 
     public void setCommand(String[] command){
+        for (int i = 0; i < command.length; i++) {
+            command[i] = command[i].toLowerCase();
+        }
         this.command = command;
     }
 
