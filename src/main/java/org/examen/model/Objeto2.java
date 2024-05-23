@@ -34,7 +34,7 @@ public class Objeto2 {
 
         @Override
         public String toString() {
-            return "Nombre: " + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2;
+            return ANSI_YELLOW + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2 + ANSI_RESET;
         }
 
 }
