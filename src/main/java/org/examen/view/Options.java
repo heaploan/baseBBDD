@@ -47,7 +47,6 @@ public class Options {
         }
     }
 
-
     public void showObject1() throws CommandException, SQLException, BbddException {
         vl.valComLength(command,2);
         String nombre = command[1];
@@ -71,6 +70,7 @@ public class Options {
         vl.valComLength(command,2);
         String nombre = command[1];
         od.delObjeto1(nombre);
+        System.out.println(msg.getMessage(Message.OBJECT1_SUCCESSFULLY_DELETED));
     }
 
     // ALL ABOUT OBJECT2

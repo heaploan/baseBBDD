@@ -17,19 +17,19 @@ public class Menu {
             option = command[0].toLowerCase();
             try{
                 switch(option){
-                    case "opcion1":
+                    case "adob":
                         op.addObject1();
                         break;
-                    case "opcion2":
+                    case "showallobjects":
                         op.showAllObjects1();
                         break;
-                    case "opcion3":
+                    case "showobject1":
                         op.showObject1();
                         break;
-                    case "opcion4":
+                    case "showobj1loquesea":
                         op.showObject1WithLoQueSea();
                         break;
-                    case "opcion5":
+                    case "delobj1":
                         op.deleteObject1();
                         break;
                     case "opcion6":

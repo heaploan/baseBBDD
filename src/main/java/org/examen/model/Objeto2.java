@@ -6,6 +6,13 @@ public class Objeto2 {
         private String loQueSea;
         private int loQueSea2;
 
+        //ANSI colors
+        public static final String ANSI_YELLOW = "\033[93m";
+        public static final String ANSI_RESET = "\033[0m";
+
+        public Objeto2(){
+        }
+
         public Objeto2(String nombre, String loQueSea, int loQueSea2) {
             this.nombre = nombre;
             this.loQueSea = loQueSea;

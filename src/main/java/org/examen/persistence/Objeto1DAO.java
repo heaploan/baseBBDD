@@ -103,5 +103,4 @@ public class Objeto1DAO {
         c.disconnect(con);
     }
 
-
 }

@@ -6,6 +6,10 @@ public class Objeto1 {
     private String loQueSea;
     private int loQueSea2;
 
+    //ANSI colors
+    public static final String ANSI_YELLOW = "\033[93m";
+    public static final String ANSI_RESET = "\033[0m";
+
     public Objeto1(){
     }
 
@@ -29,7 +33,7 @@ public class Objeto1 {
 
     @Override
     public String toString() {
-        return "\033[93m"+ "Nombre: " + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2 + "\033[0m";
+        return ANSI_YELLOW + "Nombre: " + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2 + ANSI_RESET;
     }
 
 }
