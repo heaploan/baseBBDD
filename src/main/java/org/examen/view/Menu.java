@@ -18,14 +18,19 @@ public class Menu {
             try{
                 switch(option){
                     case "opcion1":
+                        op.addObject1();
                         break;
                     case "opcion2":
+                        op.showAllObjects1();
                         break;
                     case "opcion3":
+                        op.showObject1();
                         break;
                     case "opcion4":
+                        op.showObject1WithLoQueSea();
                         break;
                     case "opcion5":
+                        op.deleteObject1();
                         break;
                     case "opcion6":
                         break;

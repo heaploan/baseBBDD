@@ -1,13 +1,13 @@
 package org.examen.model;
 
 public class Objeto1 {
-    private String nombre;
-    private String loQueSea;
-    private String loQueSea2;
 
     private String nombre;
     private String loQueSea;
     private int loQueSea2;
+
+    public Objeto1(){
+    }
 
     public Objeto1(String nombre, String loQueSea, int loQueSea2) {
         this.nombre = nombre;
@@ -27,15 +27,9 @@ public class Objeto1 {
         return loQueSea2;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    @Override
+    public String toString() {
+        return "\033[93m"+ "Nombre: " + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2 + "\033[0m";
     }
 
-    public void setLoQueSea(String loQueSea) {
-        this.loQueSea = loQueSea;
-    }
-
-    public void setLoQueSea2(int loQueSea2) {
-        this.loQueSea2 = loQueSea2;
-    }
 }

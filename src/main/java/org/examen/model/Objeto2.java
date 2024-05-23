@@ -24,15 +24,10 @@ public class Objeto2 {
             return loQueSea2;
         }
 
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
+
+        @Override
+        public String toString() {
+            return "Nombre: " + nombre + ", Lo que sea : " + loQueSea + ", Lo que sea2: " + loQueSea2;
         }
 
-        public void setLoQueSea(String loQueSea) {
-            this.loQueSea = loQueSea;
-        }
-
-        public void setLoQueSea2(int loQueSea2) {
-            this.loQueSea2 = loQueSea2;
-        }
 }

@@ -42,5 +42,4 @@ public class CommandException extends Exception{
         return ANSI_RED + messages.get(code) + ANSI_RESET;
     }
 
-
 }
