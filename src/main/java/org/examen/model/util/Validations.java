@@ -1,6 +1,7 @@
 package org.examen.model.util;
 
 import org.examen.exceptions.CommandException;
+import org.examen.model.enums.YesNo;
 
 public class Validations {
     public void valComLength(String[] command, int expectedLength) throws CommandException{
@@ -34,6 +35,14 @@ public class Validations {
             return Float.parseFloat(num);
         } catch (NumberFormatException e){
             throw new CommandException(CommandException.WRONG_NUM_FORMAT);
+        }
+    }
+
+    public YesNo getYesNo(String yn) throws CommandException {
+        try {
+            return YesNo.valueOf(yn.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new CommandException(CommandException.WRONG_YES_NO);
         }
     }
 
