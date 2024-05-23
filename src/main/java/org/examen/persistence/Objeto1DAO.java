@@ -1,15 +1,18 @@
 package org.examen.persistence;
 
+// local imports
 import org.examen.exceptions.BbddException;
 import org.examen.model.Objeto1;
 import org.examen.model.Objeto1DTO;
 
+// java imports
 import java.sql.*;
 import java.util.ArrayList;
 
 public class Objeto1DAO {
     private DBConnection c = new DBConnection();
 
+    // Método para comprobar que existe un objeto1 en la base de datos
     private boolean existeObjeto1(String nombre) throws SQLException{
         Connection con = c.connect();
         Statement st = con.createStatement();
@@ -25,6 +28,7 @@ public class Objeto1DAO {
         return exists;
     }
 
+    // Método para insertar un objeto1 a su propia tabla en la base de datos
     public void insertObject(Objeto1 ob1) throws SQLException, BbddException {
         if(existeObjeto1(ob1.getNombre())){
             throw new BbddException("Ya existe un objeto1 con ese nombre");
@@ -39,6 +43,7 @@ public class Objeto1DAO {
         c.disconnect(con);
     }
 
+    // Método para obtener todos los objetos1 de la base de datos
     public ArrayList<Objeto1> allObjeto1() throws SQLException {
         Connection con = c.connect();
         ArrayList<Objeto1> objeto1s = new ArrayList<>();
@@ -57,6 +62,7 @@ public class Objeto1DAO {
         return objeto1s;
     }
 
+    // Método para obtener un objeto1 por su nombre
     public Objeto1 getObjeto1ByNombre(String nombre) throws SQLException, BbddException{
         Connection con = c.connect();
         PreparedStatement ps = con.prepareStatement("SELECT * FROM objeto1 WHERE nombre = ?");
@@ -72,6 +78,7 @@ public class Objeto1DAO {
         }
     }
 
+    // Método para obtener un objeto1 por un valor en concreto
     public ArrayList<Objeto1DTO> getObjeto1WithLoQueSea(String loQueSea) throws SQLException {
         Connection con = c.connect();
         ArrayList<Objeto1DTO> objeto1s = new ArrayList<>();
@@ -88,6 +95,7 @@ public class Objeto1DAO {
         return objeto1s;
     }
 
+    // Método para eliminar un objeto1 por su nombre
     public void delObjeto1(String nombre) throws SQLException, BbddException {
         if(!existeObjeto1(nombre)){
             throw new BbddException("No existe un objeto1 con ese nombre");
